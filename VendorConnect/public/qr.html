@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>QR Code | VendorConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="qr.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         DASHBOARD SHELL
+    ================================== -->
+
+    <div class="dashboard">
+
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    V
+                </span>
+
+                <span>
+                    Vendor<span class="logo-highlight">Connect</span>
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="nav-title">
+                    MENU
+                </p>
+
+
+                <!-- Dashboard -->
+
+                <a
+                    href="dashboard.html"
+                    class="nav-item"
+                >
+
+                    <span>
+                        ▦
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <!-- My Shop -->
+
+                <a
+                    href="#"
+                    class="nav-item"
+                    id="myShopLink"
+                >
+
+                    <span>
+                        🏪
+                    </span>
+
+                    My Shop
+
+                </a>
+
+
+                <!-- Products -->
+
+                <a
+                    href="products.html"
+                    class="nav-item"
+                >
+
+                    <span>
+                        📦
+                    </span>
+
+                    Products
+
+                </a>
+
+
+                <!-- QR -->
+
+                <a
+                    href="qr.html"
+                    class="nav-item active"
+                >
+
+                    <span>
+                        ▣
+                    </span>
+
+                    QR Code
+
+                </a>
+
+
+                <p class="nav-title second-title">
+                    ACCOUNT
+                </p>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="#"
+                    class="nav-item"
+                    id="settingsLink"
+                >
+
+                    <span>
+                        ⚙
+                    </span>
+
+                    Settings
+
+                </a>
+
+
+                <!-- Logout -->
+
+                <a
+                    href="index.html"
+                    class="nav-item logout"
+                >
+
+                    <span>
+                        ↪
+                    </span>
+
+                    Logout
+
+                </a>
+
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================
+                 TOP BAR
+            ================================== -->
+
+            <header class="topbar">
+
+
+                <div>
+
+                    <p class="page-label">
+                        SHARE YOUR SHOP
+                    </p>
+
+                    <h1>
+                        QR Code
+                    </h1>
+
+                </div>
+
+
+                <!-- PROFILE -->
+
+                <div class="profile">
+
+
+                    <div
+                        class="profile-avatar"
+                        id="profileAvatar"
+                    >
+                        V
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong id="ownerName">
+                            Vendor
+                        </strong>
+
+                        <span>
+                            Shop Owner
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================
+                 QR CARD
+            ================================== -->
+
+            <section class="content-section">
+
+
+                <div class="section-header">
+
+
+                    <div>
+
+                        <p class="section-label">
+                            SCAN & SHOP
+                        </p>
+
+
+                        <h2>
+                            Your Shop QR Code
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="qr-card">
+
+
+                    <!-- QR IMAGE -->
+
+                    <div class="qr-image-wrap">
+
+                        <canvas id="qrCanvas"></canvas>
+
+                    </div>
+
+
+
+                    <!-- QR INFO -->
+
+                    <div class="qr-info">
+
+
+                        <h3 id="qrShopName">
+                            Your Shop
+                        </h3>
+
+
+                        <p class="qr-description">
+                            Customers can scan this code with their
+                            phone camera to open your digital shop
+                            instantly. Print it near your counter
+                            or share it online.
+                        </p>
+
+
+                        <label class="qr-url-label">
+                            Shop link
+                        </label>
+
+                        <div class="qr-url-box">
+
+                            <input
+                                type="text"
+                                id="shopUrlInput"
+                                readonly
+                            >
+
+                            <button
+                                id="copyUrlButton"
+                                type="button"
+                            >
+                                Copy
+                            </button>
+
+                        </div>
+
+
+                        <div class="qr-actions">
+
+                            <button
+                                id="downloadQrButton"
+                                class="primary-button"
+                                type="button"
+                            >
+                                Download QR Code
+                            </button>
+
+                            <a
+                                id="openShopLink"
+                                href="#"
+                                target="_blank"
+                                class="secondary-link-button"
+                            >
+                                Preview Shop →
+                            </a>
+
+                        </div>
+
+
+                        <div class="qr-note">
+
+                            <span>ℹ</span>
+
+                            <p>
+                                Customers can scan this code from anywhere.
+                                If you change your website address, download
+                                a new QR code and replace the printed one.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =================================
+         QR CODE LIBRARY
+    ================================== -->
+
+    <script src="qrcode.min.js"></script>
+
+
+    <!-- =================================
+         PAGE SCRIPT
+    ================================== -->
+
+    <script src="qr.js"></script>
+
+
+</body>
+
+</html>

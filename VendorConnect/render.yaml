@@ -1,0 +1,15 @@
+# Optional: Render "Blueprint". A persistent disk needs a paid plan.
+services:
+  - type: web
+    name: vendorconnect
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: vendorconnect-data
+      mountPath: /var/data
+      sizeGB: 1

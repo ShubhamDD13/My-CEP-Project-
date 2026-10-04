@@ -1,0 +1,253 @@
+/* =========================
+   QR CARD
+========================= */
+
+.qr-card {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 35px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   QR IMAGE
+========================= */
+
+.qr-image-wrap {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 240px;
+    height: 240px;
+
+    background: #f8fafc;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 14px;
+
+    padding: 15px;
+}
+
+.qr-image-wrap canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   QR INFO
+========================= */
+
+.qr-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.qr-info h3 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.qr-description {
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    max-width: 480px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   URL BOX
+========================= */
+
+.qr-url-label {
+    display: block;
+
+    color: #334155;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.qr-url-box {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    max-width: 480px;
+}
+
+.qr-url-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #e2e8f0;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+    color: #0f172a;
+
+    font-size: 11px;
+}
+
+.qr-url-box button {
+    border: 1px solid #e2e8f0;
+
+    background: white;
+
+    color: #334155;
+
+    padding: 0 16px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.qr-url-box button:hover {
+    border-color: #bfdbfe;
+
+    color: #2563eb;
+}
+
+.qr-url-box button.copied {
+    background: #f0fdf4;
+
+    border-color: #bbf7d0;
+
+    color: #16a34a;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.qr-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.secondary-link-button {
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.qr-note {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    max-width: 480px;
+
+    padding: 12px 14px;
+
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 10px;
+
+    color: #1d4ed8;
+}
+
+.qr-note span {
+    font-size: 12px;
+}
+
+.qr-note p {
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .qr-card {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 22px;
+    }
+
+    .qr-description,
+    .qr-note,
+    .qr-url-box {
+        max-width: 100%;
+    }
+
+    .qr-url-box {
+        text-align: left;
+    }
+
+    .qr-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .qr-actions .primary-button {
+        width: 100%;
+    }
+}

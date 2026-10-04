@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | VendorConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <main class="register-page">
+
+        <!-- Left side -->
+        <section class="register-info">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">V</span>
+                <span>Vendor<span class="logo-highlight">Connect</span></span>
+            </a>
+
+            <div class="info-content">
+
+                <div class="section-label">
+                    WELCOME BACK
+                </div>
+
+                <h1>
+                    Sign in to
+                    <span>your digital shop.</span>
+                </h1>
+
+                <p>
+                    Access your dashboard, manage products and
+                    keep your digital shop up to date.
+                </p>
+
+                <div class="benefits">
+
+                    <div class="benefit">
+                        <div class="benefit-icon">🏪</div>
+                        <div>
+                            <strong>Any Device, Anytime</strong>
+                            <p>Log in from your phone, laptop, or a shared computer.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">📦</div>
+                        <div>
+                            <strong>Your Products, Saved</strong>
+                            <p>Everything you've added is right where you left it.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Right side -->
+        <section class="register-form-section">
+
+            <div class="form-container">
+
+                <div class="form-heading">
+
+                    <a href="index.html" class="back-link">
+                        ← Back to home
+                    </a>
+
+                    <h2>Welcome back</h2>
+
+                    <p>
+                        Enter your phone number and password to continue.
+                    </p>
+
+                </div>
+
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="10-digit mobile number"
+                            maxlength="10"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Your password"
+                            required
+                        >
+                    </div>
+
+
+                    <div id="formMessage" class="form-message"></div>
+
+
+                    <button type="submit" class="submit-button">
+                        Login
+                        <span>→</span>
+                    </button>
+
+
+                    <p class="auth-switch">
+                        Don't have a shop yet?
+                        <a href="register.html">
+                            Create one
+                        </a>
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="login.js"></script>
+
+</body>
+</html>

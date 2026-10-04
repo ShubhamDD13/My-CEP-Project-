@@ -1,0 +1,105 @@
+/* Settings page (layout comes from dashboard.css) */
+
+.settings-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 640px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    color: #334155;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.input-group label span {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 11px 12px;
+    outline: none;
+    color: #0f172a;
+    font-family: inherit;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.input-group input,
+.input-group select {
+    height: 43px;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    background: white;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.settings-message {
+    display: none;
+    padding: 10px 12px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    font-size: 11px;
+}
+
+.settings-message.success {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.settings-message.error {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.settings-card .primary-button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.settings-card .primary-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .input-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .settings-card .primary-button {
+        width: 100%;
+    }
+}

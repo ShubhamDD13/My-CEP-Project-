@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VendorConnect - Digital Shop</title>
+
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="navbar">
+
+        <div class="logo-area">
+
+            <div class="logo-box">V</div>
+
+            <div class="logo-text">
+                Vendor<span>Connect</span>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="../index.html">Home</a>
+
+            <a href="#">How It Works</a>
+
+            <a href="#">Features</a>
+
+            <a href="#">About</a>
+
+        </nav>
+
+
+        <a href="../register.html" class="vendor-button">
+            Create Your Shop
+        </a>
+
+    </header>
+
+
+
+    <!-- ================= SHOP NOT FOUND / LOAD ERROR ================= -->
+    <!-- Hidden by default. Shown instead of the shop content
+         when the shop can't be loaded, so we never silently
+         display stale placeholder data as if it were real. -->
+
+    <div
+        id="shopLoadError"
+        class="message error"
+        style="display:none; padding: 120px 20px;"
+    >
+
+        <div class="message-icon" id="shopLoadErrorIcon">
+            ⚠
+        </div>
+
+        <h3 id="shopLoadErrorTitle">
+            Unable to load this shop
+        </h3>
+
+        <p id="shopLoadErrorText">
+            Please check the link and try again.
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= SHOP CONTENT ================= -->
+    <!-- Hidden until we confirm the shop actually loaded. -->
+
+    <div id="shopContent" style="display:none;">
+
+
+        <!-- ================= SHOP HERO ================= -->
+
+        <section class="shop-hero">
+
+            <div class="hero-badge">
+                ✦ Digital Store
+            </div>
+
+
+            <h1>
+                Welcome to
+                <span>Our Shop.</span>
+            </h1>
+
+
+            <p>
+                Discover our products, check prices and
+                browse everything available in our digital store.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================= SHOP INFO ================= -->
+
+        <section class="shop-card">
+
+            <div class="shop-avatar">
+                SG
+            </div>
+
+
+            <div class="shop-details">
+
+                <h2>
+                    Sharma General Store
+                </h2>
+
+                <p>
+                    📍 Mumbai, Maharashtra
+                </p>
+
+            </div>
+
+
+            <div class="digital-tag">
+                ● Digital Shop
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PRODUCTS SECTION ================= -->
+
+        <main class="shop-container">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Our Products</h2>
+
+                    <p>
+                        Browse what's available in our store.
+                    </p>
+                </div>
+
+            </div>
+
+
+
+            <!-- CATEGORY FILTER -->
+
+            <div class="category-container" id="categoryContainer">
+
+                <button
+                    class="category-button active"
+                    data-category="all">
+
+                    All
+
+                </button>
+
+            </div>
+
+
+
+            <!-- PRODUCTS -->
+
+            <section
+                id="productsContainer"
+                class="products-container">
+
+            </section>
+
+
+
+            <!-- LOADING -->
+
+            <div
+                id="loadingMessage"
+                class="message">
+
+                Loading products...
+
+            </div>
+
+
+
+            <!-- EMPTY -->
+
+            <div
+                id="emptyMessage"
+                class="message"
+                style="display:none;">
+
+                <div class="message-icon">
+                    🛍️
+                </div>
+
+                <h3>
+                    No products available
+                </h3>
+
+                <p>
+                    This shop hasn't added any products yet.
+                </p>
+
+            </div>
+
+
+
+            <!-- ERROR -->
+
+            <div
+                id="errorMessage"
+                class="message error"
+                style="display:none;">
+
+                <div class="message-icon">
+                    ⚠
+                </div>
+
+                <h3>
+                    Unable to load products
+                </h3>
+
+                <p>
+                    Please try again later.
+                </p>
+
+            </div>
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <div class="small-logo">
+                V
+            </div>
+
+            <strong>
+                Vendor<span>Connect</span>
+            </strong>
+
+        </div>
+
+
+        <p>
+            Digital tools for local businesses.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 VendorConnect. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <script src="shop.js"></script>
+
+</body>
+
+</html>

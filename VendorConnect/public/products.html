@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | VendorConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="products.css">
+
+</head>
+<body>
+
+    <!-- =========================
+         TOAST NOTIFICATION
+    ========================== -->
+
+    <div id="toast" class="toast"></div>
+
+
+    <div class="products-page">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">V</span>
+
+                <span>
+                    Vendor<span class="logo-highlight">Connect</span>
+                </span>
+            </a>
+
+
+            <nav class="sidebar-nav">
+
+                <p class="nav-title">MENU</p>
+
+                <a href="dashboard.html" class="nav-item">
+                    <span>▦</span>
+                    Dashboard
+                </a>
+
+                <a href="#" class="nav-item" id="myShopLink">
+                    <span>🏪</span>
+                    My Shop
+                </a>
+
+                <a href="products.html" class="nav-item active">
+                    <span>📦</span>
+                    Products
+                </a>
+
+                <a href="qr.html" class="nav-item">
+                    <span>▣</span>
+                    QR Code
+                </a>
+
+
+                <p class="nav-title second-title">ACCOUNT</p>
+
+                <a href="settings.html" class="nav-item">
+                    <span>⚙</span>
+                    Settings
+                </a>
+
+                <a href="index.html" class="nav-item logout">
+                    <span>↪</span>
+                    Logout
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="products-main">
+
+
+            <!-- Header -->
+
+            <header class="page-header">
+
+                <div>
+
+                    <p class="page-label">
+                        PRODUCT MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Products
+                    </h1>
+
+                    <p class="page-description">
+                        Manage the products displayed in your digital shop.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="add-product-button"
+                    id="addProductButton"
+                >
+                    + Add Product
+                </button>
+
+            </header>
+
+
+            <!-- =========================
+                 ADD PRODUCT FORM
+            ========================== -->
+
+            <section
+                class="product-form-card"
+                id="productFormCard"
+            >
+
+                <div class="form-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            NEW PRODUCT
+                        </p>
+
+                        <h2>
+                            Add a Product
+                        </h2>
+
+                    </div>
+
+                    <button
+                        class="close-button"
+                        id="closeFormButton"
+                        type="button"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <form id="productForm">
+
+
+                    <!-- Product name -->
+
+                    <div class="input-group">
+
+                        <label for="productName">
+                            Product Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            placeholder="e.g. Fresh Milk"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Price + Category -->
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+
+                            <label for="productPrice">
+                                Price (₹)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="productPrice"
+                                placeholder="e.g. 30"
+                                min="0"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="productCategory">
+                                Category
+                            </label>
+
+                            <select
+                                id="productCategory"
+                                required
+                            >
+
+                                <option
+                                    value=""
+                                    disabled
+                                    selected
+                                >
+                                    Select category
+                                </option>
+
+                                <option value="grocery">
+                                    Grocery
+                                </option>
+
+                                <option value="dairy">
+                                    Dairy
+                                </option>
+
+                                <option value="bakery">
+                                    Bakery
+                                </option>
+
+                                <option value="beverages">
+                                    Beverages
+                                </option>
+
+                                <option value="snacks">
+                                    Snacks
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Description -->
+
+                    <div class="input-group">
+
+                        <label for="productDescription">
+                            Description
+                            <span>(Optional)</span>
+                        </label>
+
+                        <textarea
+                            id="productDescription"
+                            placeholder="Short description of the product..."
+                            rows="3"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Picture -->
+
+                    <div class="input-group">
+
+                        <label for="productImage">
+                            Picture
+                            <span>(Optional)</span>
+                        </label>
+
+                        <div class="image-upload">
+
+                            <div class="image-preview" id="imagePreview">
+                                📷
+                            </div>
+
+                            <div class="image-upload-actions">
+
+                                <input
+                                    type="file"
+                                    id="productImage"
+                                    accept="image/jpeg,image/png,image/webp"
+                                >
+
+                                <button
+                                    type="button"
+                                    class="remove-image-button"
+                                    id="removeImageButton"
+                                    style="display:none;"
+                                >
+                                    Remove picture
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Availability -->
+
+                    <div class="availability-group">
+
+                        <input
+                            type="checkbox"
+                            id="productAvailable"
+                            checked
+                        >
+
+                        <label for="productAvailable">
+                            Product is currently available
+                        </label>
+
+                    </div>
+
+
+                    <div
+                        id="productFormMessage"
+                        class="form-message"
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        class="save-product-button"
+                    >
+                        Save Product
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- =========================
+                 PRODUCT LIST
+            ========================== -->
+
+            <section class="products-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            YOUR CATALOGUE
+                        </p>
+
+                        <h2>
+                            Your Products
+                        </h2>
+
+                    </div>
+
+                    <span
+                        class="product-count"
+                        id="productCount"
+                    >
+                        0 products
+                    </span>
+
+                </div>
+
+
+                <!-- Empty state -->
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                >
+
+                    <div class="empty-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        No products yet
+                    </h3>
+
+                    <p>
+                        Add your first product to start building
+                        your digital catalogue.
+                    </p>
+
+                    <button
+                        class="empty-add-button"
+                        id="emptyAddButton"
+                    >
+                        + Add Your First Product
+                    </button>
+
+                </div>
+
+
+                <!-- Products will be inserted here by JS -->
+
+                <div
+                    class="products-list"
+                    id="productsList"
+                ></div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="products.js"></script>
+
+</body>
+
+</html>

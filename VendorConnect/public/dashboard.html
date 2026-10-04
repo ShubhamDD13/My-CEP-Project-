@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | VendorConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         DASHBOARD
+    ================================== -->
+
+    <div class="dashboard">
+
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    V
+                </span>
+
+                <span>
+                    Vendor<span class="logo-highlight">Connect</span>
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="nav-title">
+                    MENU
+                </p>
+
+
+                <!-- Dashboard -->
+
+                <a
+                    href="dashboard.html"
+                    class="nav-item active"
+                >
+
+                    <span>
+                        ▦
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <!-- My Shop -->
+
+                <a
+                    href="#"
+                    class="nav-item"
+                    id="myShopLink"
+                >
+
+                    <span>
+                        🏪
+                    </span>
+
+                    My Shop
+
+                </a>
+
+
+                <!-- Products -->
+
+                <a
+                    href="products.html"
+                    class="nav-item"
+                >
+
+                    <span>
+                        📦
+                    </span>
+
+                    Products
+
+                </a>
+
+
+                <!-- QR -->
+
+                <a
+                    href="qr.html"
+                    class="nav-item"
+                    id="qrLink"
+                >
+
+                    <span>
+                        ▣
+                    </span>
+
+                    QR Code
+
+                </a>
+
+
+                <p class="nav-title second-title">
+                    ACCOUNT
+                </p>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="#"
+                    class="nav-item"
+                    id="settingsLink"
+                >
+
+                    <span>
+                        ⚙
+                    </span>
+
+                    Settings
+
+                </a>
+
+
+                <!-- Logout -->
+
+                <a
+                    href="index.html"
+                    class="nav-item logout"
+                >
+
+                    <span>
+                        ↪
+                    </span>
+
+                    Logout
+
+                </a>
+
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================
+                 TOP BAR
+            ================================== -->
+
+            <header class="topbar">
+
+
+                <div>
+
+                    <p class="page-label">
+                        VENDOR DASHBOARD
+                    </p>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                </div>
+
+
+                <!-- PROFILE -->
+
+                <div class="profile">
+
+
+                    <div
+                        class="profile-avatar"
+                        id="profileAvatar"
+                    >
+                        V
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong id="ownerName">
+                            Vendor
+                        </strong>
+
+                        <span>
+                            Shop Owner
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================
+                 WELCOME SECTION
+            ================================== -->
+
+            <section class="welcome-section">
+
+
+                <div>
+
+                    <p class="welcome-small">
+                        Welcome back 👋
+                    </p>
+
+
+                    <h2 id="welcomeMessage">
+                        Your shop is ready to go.
+                    </h2>
+
+
+                    <p>
+                        Manage your digital shop,
+                        products and customer presence
+                        from here.
+                    </p>
+
+                </div>
+
+
+                <!-- VIEW SHOP -->
+
+                <a
+                    href="#"
+                    class="primary-button"
+                >
+
+                    View My Shop →
+
+                </a>
+
+            </section>
+
+
+
+            <!-- =================================
+                 STAT CARDS
+            ================================== -->
+
+            <section class="stats-grid">
+
+
+                <!-- PRODUCTS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📦
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total Products
+                        </span>
+
+
+                        <strong id="productCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SHOP VIEWS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        👁
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Shop Views
+                        </span>
+
+
+                        <strong id="shopViews">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SHOP STATUS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ●
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Shop Status
+                        </span>
+
+
+                        <strong class="status">
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 SHOP OVERVIEW
+            ================================== -->
+
+            <section class="content-section">
+
+
+                <div class="section-header">
+
+
+                    <div>
+
+                        <p class="section-label">
+                            YOUR BUSINESS
+                        </p>
+
+
+                        <h2>
+                            Shop Overview
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="#"
+                        class="edit-link"
+                        id="editShopLink"
+                    >
+                        Edit Shop →
+                    </a>
+
+                </div>
+
+
+
+                <!-- SHOP CARD -->
+
+                <div class="shop-overview">
+
+
+                    <!-- SHOP AVATAR -->
+
+                    <div
+                        class="shop-avatar"
+                        id="shopAvatar"
+                    >
+                        V
+                    </div>
+
+
+
+                    <!-- SHOP DETAILS -->
+
+                    <div class="shop-details">
+
+
+                        <h3 id="shopName">
+                            Your Shop
+                        </h3>
+
+
+                        <p id="shopCategory">
+                            Business Category
+                        </p>
+
+
+                        <p id="shopLocation">
+                            📍 Your Location
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- STATUS -->
+
+                    <div class="shop-status">
+
+                        <span class="status-dot"></span>
+
+                        Active
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 QUICK ACTIONS
+            ================================== -->
+
+            <section class="content-section">
+
+
+                <div class="section-header">
+
+
+                    <div>
+
+                        <p class="section-label">
+                            GET STARTED
+                        </p>
+
+
+                        <h2>
+                            Quick Actions
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="actions-grid">
+
+
+                    <!-- =================================
+                         ADD PRODUCTS
+                    ================================== -->
+
+                    <a
+                        href="products.html"
+                        class="action-card"
+                    >
+
+
+                        <div class="action-icon">
+                            📦
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Add Products
+                            </h3>
+
+
+                            <p>
+                                Add products and prices
+                                to your digital catalogue.
+                            </p>
+
+                        </div>
+
+
+                        <span class="action-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- =================================
+                         QR CODE
+                    ================================== -->
+
+                    <a
+                        href="qr.html"
+                        class="action-card"
+                        id="qrAction"
+                    >
+
+
+                        <div class="action-icon">
+                            ▣
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Generate QR Code
+                            </h3>
+
+
+                            <p>
+                                Create a QR code for
+                                customers to scan.
+                            </p>
+
+                        </div>
+
+
+                        <span class="action-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+
+                    <!-- =================================
+                         CUSTOMIZE SHOP
+                    ================================== -->
+
+                    <a
+                        href="#"
+                        class="action-card"
+                        id="customizeAction"
+                    >
+
+
+                        <div class="action-icon">
+                            🏪
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Customize Shop
+                            </h3>
+
+
+                            <p>
+                                Update your shop information
+                                and appearance.
+                            </p>
+
+                        </div>
+
+
+                        <span class="action-arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =================================
+         JAVASCRIPT
+    ================================== -->
+
+    <script src="dashboard.js"></script>
+
+
+</body>
+
+</html>

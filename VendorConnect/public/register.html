@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Your Shop | VendorConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+    <main class="register-page">
+
+        <!-- Left side -->
+        <section class="register-info">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">V</span>
+                <span>Vendor<span class="logo-highlight">Connect</span></span>
+            </a>
+
+            <div class="info-content">
+
+                <div class="section-label">
+                    GET STARTED
+                </div>
+
+                <h1>
+                    Give your shop
+                    <span>a digital identity.</span>
+                </h1>
+
+                <p>
+                    Create your digital shop profile and start
+                    showcasing your products to customers online.
+                </p>
+
+                <div class="benefits">
+
+                    <div class="benefit">
+                        <div class="benefit-icon">🏪</div>
+                        <div>
+                            <strong>Your Digital Shop</strong>
+                            <p>Create a simple online presence for your business.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">📦</div>
+                        <div>
+                            <strong>Showcase Products</strong>
+                            <p>Add products, prices and availability.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit">
+                        <div class="benefit-icon">▦</div>
+                        <div>
+                            <strong>Share With QR</strong>
+                            <p>Let customers access your shop with one scan.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Right side -->
+        <section class="register-form-section">
+
+            <div class="form-container">
+
+                <div class="form-heading">
+
+                    <a href="index.html" class="back-link">
+                        ← Back to home
+                    </a>
+
+                    <h2>Create your shop</h2>
+
+                    <p>
+                        Enter your business details to get started.
+                    </p>
+
+                </div>
+
+
+                <form id="registerForm">
+
+                    <!-- Shop information -->
+
+                    <div class="form-section-title">
+                        Shop Information
+                    </div>
+
+                    <div class="input-group">
+                        <label for="shopName">Shop Name</label>
+
+                        <input
+                            type="text"
+                            id="shopName"
+                            name="shopName"
+                            placeholder="e.g. Sharma General Store"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label for="ownerName">Owner Name</label>
+
+                            <input
+                                type="text"
+                                id="ownerName"
+                                name="ownerName"
+                                placeholder="Your name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="category">Category</label>
+
+                            <select id="category" name="category" required>
+
+                                <option value="" disabled selected>
+                                    Select category
+                                </option>
+
+                                <option value="grocery">Grocery</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="food">Food & Beverages</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="stationery">Stationery</option>
+                                <option value="other">Other</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="location">Shop Location</label>
+
+                        <input
+                            type="text"
+                            id="location"
+                            name="location"
+                            placeholder="e.g. Chembur, Mumbai"
+                            required
+                        >
+                    </div>
+
+
+                    <!-- Contact information -->
+
+                    <div class="form-section-title">
+                        Contact Information
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="10-digit mobile number"
+                            maxlength="10"
+                            required
+                        >
+                    </div>
+
+
+
+                    <!-- Account -->
+
+                    <div class="form-section-title">
+                        Account
+                    </div>
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label for="password">Password</label>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Create password"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="confirmPassword">Confirm Password</label>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Repeat password"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <div id="formMessage" class="form-message"></div>
+
+
+                    <button type="submit" class="submit-button">
+                        Create My Shop
+                        <span>→</span>
+                    </button>
+
+
+                    <p class="form-note">
+                        By creating a shop, you agree to use the platform
+                        responsibly and provide accurate information.
+                    </p>
+
+                    <p class="auth-switch">
+                        Already have a shop?
+                        <a href="login.html">Login</a>
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="register.js"></script>
+
+</body>
+</html>

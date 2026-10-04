@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings | VendorConnect</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="settings.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         DASHBOARD SHELL
+    ================================== -->
+
+    <div class="dashboard">
+
+
+        <!-- =================================
+             SIDEBAR
+        ================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    V
+                </span>
+
+                <span>
+                    Vendor<span class="logo-highlight">Connect</span>
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="nav-title">
+                    MENU
+                </p>
+
+
+                <!-- Dashboard -->
+
+                <a
+                    href="dashboard.html"
+                    class="nav-item"
+                >
+
+                    <span>
+                        ▦
+                    </span>
+
+                    Dashboard
+
+                </a>
+
+
+                <!-- My Shop -->
+
+                <a
+                    href="#"
+                    class="nav-item"
+                    id="myShopLink"
+                >
+
+                    <span>
+                        🏪
+                    </span>
+
+                    My Shop
+
+                </a>
+
+
+                <!-- Products -->
+
+                <a
+                    href="products.html"
+                    class="nav-item"
+                >
+
+                    <span>
+                        📦
+                    </span>
+
+                    Products
+
+                </a>
+
+
+                <!-- QR -->
+
+                <a
+                    href="qr.html"
+                    class="nav-item"
+                >
+
+                    <span>
+                        ▣
+                    </span>
+
+                    QR Code
+
+                </a>
+
+
+                <p class="nav-title second-title">
+                    ACCOUNT
+                </p>
+
+
+                <!-- Settings -->
+
+                <a
+                    href="settings.html"
+                    class="nav-item active"
+                    id="settingsLink"
+                >
+
+                    <span>
+                        ⚙
+                    </span>
+
+                    Settings
+
+                </a>
+
+
+                <!-- Logout -->
+
+                <a
+                    href="index.html"
+                    class="nav-item logout"
+                >
+
+                    <span>
+                        ↪
+                    </span>
+
+                    Logout
+
+                </a>
+
+
+            </nav>
+
+        </aside>
+
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
+
+        <main class="dashboard-main">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="page-label">ACCOUNT</p>
+                    <h1>Settings</h1>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar" id="profileAvatar">V</div>
+                    <div class="profile-info">
+                        <strong id="ownerNameDisplay">Vendor</strong>
+                        <span>Shop Owner</span>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- SHOP DETAILS -->
+
+            <section class="content-section">
+
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">YOUR BUSINESS</p>
+                        <h2>Shop details</h2>
+                    </div>
+                </div>
+
+                <form class="settings-card" id="shopForm">
+
+                    <div class="input-group">
+                        <label for="shopName">Shop name</label>
+                        <input type="text" id="shopName" required>
+                    </div>
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label for="ownerName">Owner name</label>
+                            <input type="text" id="ownerName" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="category">Category</label>
+                            <select id="category" required>
+                                <option value="grocery">Grocery</option>
+                                <option value="clothing">Clothing</option>
+                                <option value="food">Food &amp; Beverages</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="stationery">Stationery</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label for="location">Shop location</label>
+                        <input type="text" id="location" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="description">
+                            Shop description <span>(shown to customers)</span>
+                        </label>
+                        <textarea id="description" rows="3"
+                            placeholder="Tell customers what your shop offers"></textarea>
+                    </div>
+
+                    <div class="settings-message" id="shopMessage"></div>
+
+                    <button type="submit" class="primary-button" id="shopSave">
+                        Save changes
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- PASSWORD -->
+
+            <section class="content-section">
+
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">SECURITY</p>
+                        <h2>Change password</h2>
+                    </div>
+                </div>
+
+                <form class="settings-card" id="passwordForm">
+
+                    <div class="input-group">
+                        <label for="currentPassword">Current password</label>
+                        <input type="password" id="currentPassword" required>
+                    </div>
+
+                    <div class="input-row">
+
+                        <div class="input-group">
+                            <label for="newPassword">New password</label>
+                            <input type="password" id="newPassword"
+                                minlength="6" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="confirmNewPassword">Confirm new password</label>
+                            <input type="password" id="confirmNewPassword"
+                                minlength="6" required>
+                        </div>
+
+                    </div>
+
+                    <div class="settings-message" id="passwordMessage"></div>
+
+                    <button type="submit" class="primary-button" id="passwordSave">
+                        Change password
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="settings.js"></script>
+
+</body>
+
+</html>
